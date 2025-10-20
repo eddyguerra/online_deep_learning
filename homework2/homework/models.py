@@ -153,8 +153,8 @@ class MLPClassifierDeepResidual(nn.Module):
         h: int = 64,
         w: int = 64,
         num_classes: int = 6,
-        hidden_dim: int = 256,
-        num_layers: int = 4,
+        hidden_dim: int = 128,  # MUST BE 128 OR LESS - Reduced from 256 to stay under 10MB limit
+        num_layers: int = 3,     # MUST BE 3 OR LESS - Reduced from 4 to stay under 10MB limit
     ):
         """
         Args:
